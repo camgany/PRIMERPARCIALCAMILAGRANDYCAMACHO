@@ -61,14 +61,29 @@ public class Celular implements ICelular{
     public Object clone() {
         Camara cloneC = new Camara();
         cloneC.setFoto(this.getCamara().getFoto());
-        cloneC.setLente(this.getCamara().setLente());
+        cloneC.setLente(this.getCamara().getLente());
 
         Celular clone = new Celular();
         clone.setModelo(this.getModelo());
         clone.setTamano(this.getTamano());
         clone.setPeso(this.getPeso());
         clone.setCamara(cloneC);
+        clone.setImei(this.getImei());
+        clone.setOrigen(this.getOrigen());
 
-        return null;
+        return clone;
+
+    }
+
+    public void showInfo(){
+        System.out.println("--------------------------------------------------");
+        System.out.println("Modelo: "+this.getModelo());
+        System.out.println("Tamano: "+this.getTamano());
+        System.out.println("Peso: "+this.getPeso());
+        System.out.println("Camara: ");
+        System.out.println("  - Foco: "+this.getCamara().getFoto());
+        System.out.println("  - Lente: "+this.getCamara().getLente());
+        System.out.println("Imei: "+this.getImei());
+        System.out.println("Pais Origen: "+this.getOrigen());
     }
 }
