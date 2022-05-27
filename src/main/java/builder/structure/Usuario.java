@@ -7,7 +7,7 @@ public class Usuario {
     }
     public void subscripcion(BuilderContrato builderContrato, Empresa empresa){
         empresa.setBuilder(builderContrato);
-        empresa.getProduct();
+        empresa.buildProduct();
 
         Contrato contrato = empresa.getProduct();
         contrato.showInfo();
