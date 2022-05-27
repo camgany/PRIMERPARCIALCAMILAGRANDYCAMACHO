@@ -4,9 +4,9 @@ public class Client {
 
     public static void main(String[]args){
 
-        Director director = new Director();
-        ConcreteBuilder1 p1=new ConcreteBuilder1();
-        ConcreteBuilder2 p2=new ConcreteBuilder2();
+        Empresa director = new Empresa();
+        ContratoAMAZON p1=new ContratoAMAZON();
+        ContratoNETFLIX p2=new ContratoNETFLIX();
 
         director.setBuilder(p2);
         director.buildProduct();
